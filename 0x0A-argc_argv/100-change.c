@@ -2,39 +2,33 @@
 #include <stdlib.h>
 
 /**
- * main - prints the min number of cents
- * atoi - converts the strings to integer
- * @argc: is considered to be the argument counter
- * @argv: is considered to be the argument vector array
+ * main - entry point
+ * @argc: argument count
+ * @argv: argument vecctor arrray
  *
- * Return: always (0) success, (1) failure
+ * Return: 0;
  */
 
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
-	{
-		int i, leastcents = 0, money = atoi(argv[1]);
-		int cents[] = {25, 10, 5, 2, 1};
+	int c, change = 0, i = 0;
+	int coins[] = {25, 10, 5, 2, 1};
 
-		for (i = 0; i < 5; i++)
-		{
-			if (money >= cents[i])
-			{
-				leastcents += money / cents[i];
-				money = money % cents[i];
-				if (money % cents[i] == 0)
-				{
-					break;
-				}
-			}
-		}
-	}
-	printf("%d\n", leastcents);
-	else
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	c = atoi(argv[1]);
+
+	for (i = 0; i < 5; i++)
+	{
+		if (c >= coins[i])
+		{
+			change += c / coins[i];
+			c %= coins[i];
+		}
+	}
+	printf("%d\n",  change);
 	return (0);
 }
