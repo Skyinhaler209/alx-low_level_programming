@@ -6,7 +6,7 @@
  *@size:takes array size
  *@c: chaharcter to be assigned
  *
- *DESCRIPTION: creating an array of determined size and inti *alize, assign char to it
+ *DESCRIPTION: creating an array of determined size
  *
  * Return: pointer to array, NULL on failure
  */
