@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- *create_array - used for declaring an array of size size 
+ *create_array - used for declaring an array of size size
  *@size:takes array size
  *@c: chaharcter to be assigned
  *
- *DESCRIPTION: creating an array of determined size and inti *alize, assign char to it 
+ *DESCRIPTION: creating an array of determined size and inti *alize, assign char to it
  *
  * Return: pointer to array, NULL on failure
  */
